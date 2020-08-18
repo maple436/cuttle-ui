@@ -1,10 +1,8 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    <g-icon v-if="icon" :name="icon"></g-icon>
     <div class="content">
-      <slot></slot>
+      <slot/>
     </div>
   </button>
 </template>
@@ -69,13 +67,5 @@
         margin-left: .1em;
       }
     }
-  }
-</style>
-<style>
-  .icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
   }
 </style>
