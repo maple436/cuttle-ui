@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/maple436/gulu-ui/issues"
   },
-  "homepage": "https://github.com/maple436/gulu-ui#readme"
+  "homepage": "https://github.com/maple436/gulu-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
