@@ -40,6 +40,7 @@ try {
     vm.$el.remove()
     vm.$destroy()
   }
+
   {
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -55,6 +56,7 @@ try {
     vm.$el.remove()
     vm.$destroy()
   }
+
   {
     const div = document.createElement('div')
     document.body.appendChild(div)
@@ -71,6 +73,7 @@ try {
     vm.$el.remove()
     vm.$destroy()
   }
+
   {
     const div = document.createElement('div')
     document.body.appendChild(div)
@@ -88,6 +91,7 @@ try {
     vm.$el.remove()
     vm.$destroy()
   }
+
   {
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
