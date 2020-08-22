@@ -23,7 +23,8 @@
            --border-color: #999;
            --border-color-hover: #666;
          }
-    ```
+
+   ```
    IE 15 及以上浏览器都支持此样式。
 2.安装 gulu
 ```
