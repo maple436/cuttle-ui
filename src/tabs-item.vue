@@ -51,7 +51,6 @@
     align-items: center;
 
     &.active{
-      background:red;
       font-weight:bold;
     }
   }
