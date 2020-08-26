@@ -50,6 +50,7 @@ new Vue({
 
   },
   methods: {
+
     showToast1(){
       this.showToast('top')
     },
