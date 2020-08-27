@@ -37,7 +37,7 @@ Vue.component('g-tabs-head', TabsHead)
 Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
-Vue.component('popover', Popover)
+Vue.component('g-popover', Popover)
 
 import createElement from 'vue'
 
