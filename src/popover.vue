@@ -1,8 +1,8 @@
 <template>
-  <div class="popover" @click="onClick" ref="popover">
-    <div  class="contentWrapper" v-if="visible" ref="contentWrapper"
-          :class="{[`position-${position}`]:true}">
-      <slot name="content"></slot>
+  <div class="popover" ref="popover">
+    <div ref="contentWrapper" class="gulu-popover-content-wrapper" v-if="visible"
+         :class="[{[`position-${position}`]:true}]">
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -13,9 +13,6 @@
 <script>
   export default {
     name: "GuluPopover",
-    data () {
-      return {visible: false}
-    },
     props: {
       position: {
         type: String,
@@ -23,12 +20,71 @@
         validator (value) {
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
         }
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator (value) {
+          return ['click', 'hover'].indexOf(value) >= 0
+        }
+      },
+      container: {
+        type: Element
+      }
+    },
+    data () {
+      return {
+        visible: false,
+      }
+    },
+    mounted () {
+      this.addPopoverListeners()
+    },
+    beforeDestroy () {
+      this.putBackContent()
+      this.removePopoverListeners()
+    },
+    computed: {
+      openEvent () {
+        if (this.trigger === 'click') {
+          return 'click'
+        } else {
+          return 'mouseenter'
+        }
+      },
+      closeEvent () {
+        if (this.trigger === 'click') {
+          return 'click'
+        } else {
+          return 'mouseleave'
+        }
       }
     },
     methods: {
+      addPopoverListeners () {
+        if (this.trigger === 'click') {
+          this.$refs.popover.addEventListener('click', this.onClick)
+        } else {
+          this.$refs.popover.addEventListener('mouseenter', this.open)
+          this.$refs.popover.addEventListener('mouseleave', this.close)
+        }
+      },
+      removePopoverListeners () {
+        if (this.trigger === 'click') {
+          this.$refs.popover.removeEventListener('click', this.onClick)
+        } else {
+          this.$refs.popover.removeEventListener('mouseenter', this.open)
+          this.$refs.popover.removeEventListener('mouseleave', this.close)
+        }
+      },
+      putBackContent () {
+        const {contentWrapper, popover} = this.$refs
+        if (!contentWrapper) {return}
+        popover.appendChild(contentWrapper)
+      },
       positionContent () {
-        const {contentWrapper, triggerWrapper} = this.$refs
-        document.body.appendChild(contentWrapper)
+        const {contentWrapper, triggerWrapper} = this.$refs;
+        (this.container || document.body).appendChild(contentWrapper)
         const {width, height, top, left} = triggerWrapper.getBoundingClientRect()
         const {height: height2} = contentWrapper.getBoundingClientRect()
         let positions = {
@@ -57,6 +113,7 @@
       },
       open () {
         this.visible = true
+        this.$emit('open')
         this.$nextTick(() => {
           this.positionContent()
           document.addEventListener('click', this.onClickDocument)
@@ -64,6 +121,7 @@
       },
       close () {
         this.visible = false
+        this.$emit('close')
         document.removeEventListener('click', this.onClickDocument)
       },
       onClick (event) {
@@ -80,21 +138,20 @@
 </script>
 
 <style scoped lang="scss">
-  $border-color:#333;
-  $border-radius:4px;
+  $border-color: #333;
+  $border-radius: 4px;
   .popover {
     display: inline-block;
     vertical-align: top;
     position: relative;
   }
-  .contentWrapper{
+  .gulu-popover-content-wrapper {
     position: absolute;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
     background: white;
-    padding: 0.5em 1em;
-    max-width: 20em;
+    padding: .5em 1em;
     word-break: break-all;
     &::before, &::after {
       content: '';
@@ -112,10 +169,12 @@
       }
       &::before {
         border-top-color: black;
+        border-bottom: none;
         top: 100%;
       }
       &::after {
         border-top-color: white;
+        border-bottom: none;
         top: calc(100% - 1px);
       }
     }
@@ -125,10 +184,12 @@
         left: 10px;
       }
       &::before {
+        border-top: none;
         border-bottom-color: black;
         bottom: 100%;
       }
       &::after {
+        border-top: none;
         border-bottom-color: white;
         bottom: calc(100% - 1px);
       }
@@ -142,10 +203,12 @@
       }
       &::before {
         border-left-color: black;
+        border-right: none;
         left: 100%;
       }
       &::after {
         border-left-color: white;
+        border-right: none;
         left: calc(100% - 1px);
       }
     }
@@ -157,10 +220,12 @@
       }
       &::before {
         border-right-color: black;
+        border-left: none;
         right: 100%;
       }
       &::after {
         border-right-color: white;
+        border-left: none;
         right: calc(100% - 1px);
       }
     }
