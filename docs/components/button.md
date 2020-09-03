@@ -4,7 +4,9 @@
 # Button 按钮
 
 ## 基本用法
-<button-demos></button-demos>
+<ClientOnly>
+    <button-demos></button-demos>
+</ClientOnly>
 
 ## 示例代码：
 
@@ -19,8 +21,9 @@
 
 横向排列的按钮组合
 ## 基本用法
-
-<button-group-demos></button-group-demos>
+<ClientOnly>
+    <button-group-demos></button-group-demos>
+</ClientOnly>
 
 ## 示例代码
 ```vue

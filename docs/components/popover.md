@@ -6,8 +6,9 @@
 ## 基本用法
 
 ### 支持HTML
-
-<popover-demo-1></popover-demo-1>
+<ClientOnly>
+    <popover-demo-1></popover-demo-1>
+</ClientOnly>
 
 ### 示例代码:
 ```vue
@@ -38,9 +39,9 @@
 ```
 
 ### 支持 hover 触发
-
-<popover-demo-2></popover-demo-2>
-
+<ClientOnly>
+    <popover-demo-2></popover-demo-2>
+</ClientOnly>
 ### 示例代码: 
 
 ```vue

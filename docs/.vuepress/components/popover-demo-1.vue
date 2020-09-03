@@ -36,5 +36,6 @@
   import GPopover from '../../../src/popover'
   export default {
     components: {GButton, GPopover},
+  }
 
 </script>

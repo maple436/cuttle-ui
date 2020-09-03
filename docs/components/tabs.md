@@ -4,8 +4,9 @@
 # Tabs
 
 ## 基本用法
-
-<tabs-demo-1></tabs-demo-1>
+<ClientOnly>
+    <tabs-demo-1></tabs-demo-1>
+</ClientOnly>
 
 ### 示例代码:
 ```vue
@@ -31,7 +32,9 @@ export default {
 ```
 
 ### 禁用状态
- <tabs-demo-2></tabs-demo-2>
+<ClientOnly>
+    <tabs-demo-2></tabs-demo-2>
+</ClientOnly>
  
  ### 示例代码:
  ```vue

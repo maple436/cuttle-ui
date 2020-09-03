@@ -4,8 +4,9 @@
 # Collapse 折叠面板
 
 ## 基本用法
-
-<collapse-demo-1></collapse-demo-1>
+<ClientOnly>
+    <collapse-demo-1></collapse-demo-1>
+</ClientOnly>
 
 ### 示例代码:
 ```vue

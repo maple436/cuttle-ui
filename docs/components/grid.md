@@ -5,7 +5,10 @@
 ## 基本用法:
 ### 24网格
 #### 预览
-<grid-demos-1></grid-demos-1>
+
+<ClientOnly>
+    <grid-demos-1></grid-demos-1>
+</ClientOnly>
 
 #### 示例代码:
 ```vue
@@ -99,7 +102,9 @@
 
 ### 设置gutter
 #### 预览
-<grid-demos-2></grid-demos-2>
+<ClientOnly>
+    <grid-demos-2></grid-demos-2>
+</ClientOnly>
 
 #### 代码示例:
 ```vue
@@ -133,7 +138,9 @@
 
 ### 设置空隙
 ##### 预览
-<grid-demos-3></grid-demos-3>
+<ClientOnly>
+    <grid-demos-3></grid-demos-3>
+</ClientOnly>
 
 #### 代码示例:
 ```vue

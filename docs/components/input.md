@@ -4,7 +4,9 @@ title:Input
 # Input 输入框
 
 ## 基本用法:
-<input-demos></input-demos>
+<ClientOnly>
+    <input-demos></input-demos>
+</ClientOnly>
 
 ### 示例代码:
 ```vue
@@ -17,7 +19,10 @@ title:Input
 ```
 
 ## 双向绑定:
-<input-demos-1></input-demos-1>
+<ClientOnly>
+    <input-demos-1></input-demos-1>
+</ClientOnly>
+
 ```vue
 <script>
 export default {

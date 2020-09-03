@@ -6,8 +6,9 @@
 ## this.$toast
 
 ### 预览
-
-<toast-demo-1></toast-demo-1>
+<ClientOnly>
+    <toast-demo-1></toast-demo-1>
+</ClientOnly>
 
 ### 示例代码:
 
@@ -21,7 +22,9 @@
 ## 设置关闭按钮
 
 ### 预览
-<toast-demo-2></toast-demo-2>
+<ClientOnly>
+    <toast-demo-2></toast-demo-2>
+</ClientOnly>
 
 ### 示例代码:
 ```vue
@@ -46,7 +49,9 @@ methods: {
 ## 支持HTML 
 
 ### 预览
-<toast-demo-3></toast-demo-3>
+<ClientOnly>
+    <toast-demo-3></toast-demo-3>
+</ClientOnly>
 
 ### 示例代码:
 ```vue
