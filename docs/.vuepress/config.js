@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/cuttle-ui/',
   title: 'cuttle-UI',
   description: '一个好用的UI框架',
   themeConfig: {

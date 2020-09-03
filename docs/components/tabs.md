@@ -5,7 +5,7 @@
 
 ## 基本用法
 <ClientOnly>
-    <tabs-demo-1></tabs-demo-1>
+  <tabs-demo-1></tabs-demo-1>
 </ClientOnly>
 
 ### 示例代码:
@@ -33,7 +33,7 @@ export default {
 
 ### 禁用状态
 <ClientOnly>
-    <tabs-demo-2></tabs-demo-2>
+  <tabs-demo-2></tabs-demo-2>
 </ClientOnly>
  
  ### 示例代码:

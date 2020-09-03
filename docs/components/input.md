@@ -5,7 +5,7 @@ title:Input
 
 ## 基本用法:
 <ClientOnly>
-    <input-demos></input-demos>
+  <input-demos></input-demos>
 </ClientOnly>
 
 ### 示例代码:
@@ -20,7 +20,7 @@ title:Input
 
 ## 双向绑定:
 <ClientOnly>
-    <input-demos-1></input-demos-1>
+  <input-demos-1></input-demos-1>
 </ClientOnly>
 
 ```vue

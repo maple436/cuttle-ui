@@ -5,7 +5,7 @@
 
 ## 基本用法
 <ClientOnly>
-    <button-demos></button-demos>
+  <button-demos></button-demos>
 </ClientOnly>
 
 ## 示例代码：
@@ -22,7 +22,7 @@
 横向排列的按钮组合
 ## 基本用法
 <ClientOnly>
-    <button-group-demos></button-group-demos>
+  <button-group-demos></button-group-demos>
 </ClientOnly>
 
 ## 示例代码

@@ -7,7 +7,7 @@
 
 ### 预览
 <ClientOnly>
-    <layout-demos-1></layout-demos-1>
+  <layout-demos-1></layout-demos-1>
 </ClientOnly>
 
 
@@ -31,7 +31,7 @@
 
 ### 预览
 <ClientOnly>
-    <layout-demos-2></layout-demos-2>
+  <layout-demos-2></layout-demos-2>
 </ClientOnly>
 
 ### 示例代码:
@@ -58,7 +58,7 @@
 
 ### 预览
 <ClientOnly>
-    <layout-demos-3></layout-demos-3>
+  <layout-demos-3></layout-demos-3>
 </ClientOnly>
 
 ### 示例代码:

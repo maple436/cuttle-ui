@@ -7,7 +7,7 @@
 
 ### 支持HTML
 <ClientOnly>
-    <popover-demo-1></popover-demo-1>
+  <popover-demo-1></popover-demo-1>
 </ClientOnly>
 
 ### 示例代码:
@@ -40,7 +40,7 @@
 
 ### 支持 hover 触发
 <ClientOnly>
-    <popover-demo-2></popover-demo-2>
+  <popover-demo-2></popover-demo-2>
 </ClientOnly>
 ### 示例代码: 
 

@@ -5,7 +5,7 @@
 
 ## 基本用法
 <ClientOnly>
-    <collapse-demo-1></collapse-demo-1>
+  <collapse-demo-1></collapse-demo-1>
 </ClientOnly>
 
 ### 示例代码:

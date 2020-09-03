@@ -7,7 +7,7 @@
 
 ### 预览
 <ClientOnly>
-    <toast-demo-1></toast-demo-1>
+  <toast-demo-1></toast-demo-1>
 </ClientOnly>
 
 ### 示例代码:
@@ -23,7 +23,7 @@
 
 ### 预览
 <ClientOnly>
-    <toast-demo-2></toast-demo-2>
+  <toast-demo-2></toast-demo-2>
 </ClientOnly>
 
 ### 示例代码:
@@ -50,7 +50,7 @@ methods: {
 
 ### 预览
 <ClientOnly>
-    <toast-demo-3></toast-demo-3>
+  <toast-demo-3></toast-demo-3>
 </ClientOnly>
 
 ### 示例代码:
