@@ -50,7 +50,7 @@
 </script>
 
 <style scoped lang="scss">
-  $grey: #ddd;
+  $grey: rgb(230,230,230);
   $border-radius: 4px;
   .collapseItem {
     > .title { border: 1px solid $grey; margin-top: -1px; margin-left: -1px; margin-right: -1px;

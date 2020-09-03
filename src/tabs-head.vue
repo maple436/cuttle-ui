@@ -1,8 +1,8 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
     <div class="line" ref="line"></div>
-    <div class="actions-wrapper" >
+    <div class="actions-wrapper">
       <slot name="actions"></slot>
     </div>
   </div>
@@ -10,19 +10,25 @@
 <script>
   export default {
     name: 'GuluTabsHead',
-    inject:['eventBus'],
-    mounted() {
+    inject: ['eventBus'],
+    mounted () {
       this.eventBus.$on('update:selected', (item, vm) => {
-        let {width, left} = vm.$el.getBoundingClientRect()
-        this.$refs.line.style.width = `${width}px`
-        this.$refs.line.style.left = `${left}px`
+        this.updateLinePosition(vm)
       })
+    },
+    methods: {
+      updateLinePosition (selectedVm) {
+        let {width, left} = selectedVm.$el.getBoundingClientRect()
+        let {left: left2} = this.$refs.head.getBoundingClientRect()
+        this.$refs.line.style.width = `${width}px`
+        this.$refs.line.style.left = `${left - left2}px`
+      }
     }
   }
 </script>
-<style lang="scss" scoped>
+<style scoped lang="scss">
   $tab-height: 40px;
-  $blue: blue;
+  $blue: rgb(54,177,191);
   $border-color: #ddd;
   .tabs-head {
     display: flex;
@@ -34,7 +40,6 @@
       position: absolute;
       bottom: 0;
       border-bottom: 1px solid $blue;
-      width: 100px;
       transition: all 350ms;
     }
     > .actions-wrapper {

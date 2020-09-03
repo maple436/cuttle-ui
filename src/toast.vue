@@ -28,7 +28,7 @@
         type:Object,
         default(){
           return {
-            test:'关闭',callback:undefined
+            text:'关闭',callback:undefined,
           }
         }
       },
@@ -108,7 +108,7 @@
     transform: translateX(-50%);
     $animation-duration: 300ms;
     &.position-top {
-      top: 0;
+      top: 58px;
       .toast {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -143,6 +143,7 @@
     .close {
       padding-left: 16px;
       flex-shrink: 0;
+      cursor:pointer;
     }
     .line {
       height: 100%;

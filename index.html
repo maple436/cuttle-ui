@@ -12,31 +12,64 @@
       padding: 0;
       box-sizing: border-box;
     }
-
-    html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
-    body {
-      font-size: var(--font-size);
-    }
   </style>
 
 </head>
 <body >
     <div id="app"  style="padding: 100px;">
       <g-collapse :selected.sync="selectedTab" >
-        <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
+        <g-collapse-item title="标题1" name="1">内容14</g-collapse-item>
         <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
         <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
       </g-collapse>
-      {{selectedTab}}
+      <g-popover>
+        <g-button>上方弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="bottom">
+        <g-button>下方弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="left">
+        <g-button>左边弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="right">
+        <g-button>右边弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover trigger="hover">
+        <g-button>上方弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="bottom" trigger="hover">
+        <g-button>下方弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="left" trigger="hover">
+        <g-button>左边弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
+      <g-popover position="right" trigger="hover">
+        <g-button>右边弹出</g-button>
+        <template slot="content">
+          弹出内容
+        </template>
+      </g-popover>
     </div>
 <script src="./src/app.js"></script>
 </body>
